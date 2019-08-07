@@ -7,7 +7,7 @@ class SearchBar extends Component {
     event.preventDefault();
     this.props.onSearchSubmit(this.state.term);
   }
-
+  
   render() {
     return (
       <div className="search-bar ui segment">
@@ -26,5 +26,5 @@ class SearchBar extends Component {
     );
   }
 }
- 
+
 export default SearchBar;

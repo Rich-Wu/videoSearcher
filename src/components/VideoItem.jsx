@@ -2,9 +2,9 @@ import './VideoItem.css';
 import React, {Component} from 'react';
 
 class VideoItem extends Component {
-  render() { 
+  render() {
     return (
-      <div className="item video-item">
+      <div className="item video-item" onClick={() => this.props.onVideoSelect(this.props.video)} id={this.props.video.id.videoId}>
         <img className="ui image" src={this.props.video.snippet.thumbnails.medium.url} alt={this.props.video.snippet.title}/>
         <div className="content">
           <div href="#" className="header">
@@ -18,5 +18,5 @@ class VideoItem extends Component {
     );
   }
 }
- 
+
 export default VideoItem;
